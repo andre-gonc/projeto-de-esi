@@ -13,7 +13,7 @@ public class VendaTest {
         @Test
         public void testConstrutorComParametros() {
 
-                Autor autor = new Autor("João", "Gonçalves");,
+                Autor autor = new Autor("João", "Gonçalves");
                 Editora editora = new Editora("Minha Editora");
                 Livro livro = new Livro(autor, editora, "1234567890", "O Soberano", "633");
                 LivroEstoque livroDoEstoque = new LivroEstoque(livro, 10, 100.00);
