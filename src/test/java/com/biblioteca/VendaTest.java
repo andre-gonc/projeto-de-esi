@@ -19,7 +19,7 @@ public class VendaTest {
                 LivroEstoque livroDoEstoque = new LivroEstoque(livro, 10, 100.00);
                 ArrayList<LivroEstoque> nossoLivro = new ArrayList<LivroEstoque>();
                 nossoLivro.add(livroDoEstoque);
-                LivroVenda livroVenda = new LivroVenda(nossoLivro, 3);
+                LivroVenda livroVenda = new LivroVenda(livroDoEstoque, 3);
                 ArrayList<LivroVenda> livrosVenda = new ArrayList<LivroVenda>();
                 livrosVenda.add(livroVenda);
                 Venda venda = new Venda("João", "Crédito", 100.00, livrosVenda);
