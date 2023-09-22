@@ -1,6 +1,10 @@
 name: Java CI with Maven
 
-on: [pull_request, push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -17,9 +21,4 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-
-
-    testing:
-      - name: Testando
-        run: mvn test
 
