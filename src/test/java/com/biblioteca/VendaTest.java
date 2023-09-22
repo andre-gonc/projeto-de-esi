@@ -20,7 +20,9 @@ public class VendaTest {
                 nossoLivro = new ArrayList<LivroEstoque>();
                 nossoLivro.add(livroDoEstoque);
                 LivroVenda livroVenda = new LivroVenda(nossoLivro, 3);
-                Venda venda = new Venda("João", "Crédito", 100.00, livroVenda);
+                livrosVenda = new ArrayList<LivroVenda>();
+                livrosVenda.add(livroVenda)
+                Venda venda = new Venda("João", "Crédito", 100.00, livrosVenda);
                 
                 Assert.assertEquals("João", venda.nomeCliente);
                 Assert.assertEquals("Crédito", venda.formaPagamento);
