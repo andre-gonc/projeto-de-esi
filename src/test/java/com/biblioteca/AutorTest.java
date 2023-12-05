@@ -1,34 +1,45 @@
-package com.biblioteca;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
-
-@RunWith(JUnit4.class)
 public class AutorTest {
-        /**
-         * Test do construtor com parâmetros
-         */
-        @Test
-        public void testConstrutorComParametros() {
-                String nome = "João";
-                String sobrenome = "Silva";
-                Autor autor = new Autor(nome, sobrenome);
-                Assert.assertNotNull(autor.nome);
-                Assert.assertNotNull(autor.sobrenome);
-                Assert.assertEquals(autor.nome, nome);
-                Assert.assertEquals(autor.sobrenome, sobrenome);
-        }
 
-        /**
-         * Test do construtor sem parâmetros
-         */
-        @Test
-        public void testConstrutorSemParametros() {
-                Autor autor = new Autor();
-                Assert.assertNull(autor.nome);
-                Assert.assertNull(autor.sobrenome);
-        }
+    @Test
+    public void testConstrutorPadrao() {
+        Autor autor = new Autor();
+        assertEquals(null, autor.nome);
+        assertEquals(null, autor.sobrenome);
+    }
 
+    @Test
+    public void testConstrutorComParametros() {
+        Autor autor = new Autor("John", "Doe");
+        assertEquals("John", autor.nome);
+        assertEquals("Doe", autor.sobrenome);
+    }
+
+    @Test
+    public void testGetNome() {
+        Autor autor = new Autor("Jane", "Doe");
+        assertEquals("Jane", autor.nome);
+    }
+
+    @Test
+    public void testGetSobrenome() {
+        Autor autor = new Autor("Jane", "Doe");
+        assertEquals("Doe", autor.sobrenome);
+    }
+
+    @Test
+    public void testSetNome() {
+        Autor autor = new Autor();
+        autor.nome = "Alice";
+        assertEquals("Alice", autor.nome);
+    }
+
+    @Test
+    public void testSetSobrenome() {
+        Autor autor = new Autor();
+        autor.sobrenome = "Smith";
+        assertEquals("Smith", autor.sobrenome);
+    }
 }
