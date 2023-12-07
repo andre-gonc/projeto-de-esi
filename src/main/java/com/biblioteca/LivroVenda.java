@@ -2,6 +2,7 @@ package com.biblioteca;
 
 public class LivroVenda {
 
+    public static Object livroVenda;
     public LivroEstoque livroDoEstoque;
     public int quantidade;
 
